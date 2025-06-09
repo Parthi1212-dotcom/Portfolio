@@ -1,0 +1,147 @@
+/* styles.css */
+/* Base Reset */
+html, body {height:100%;margin:0;padding:0;}*{box-sizing:border-box;}body{font-family:'Roboto',sans-serif;color:#333;background:#f0f2f5;}a{text-decoration:none;color:inherit;}
+
+/* Layout */
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:260px;background:#2c3e50;color:#ecf0f1;flex-shrink:0;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem;position:fixed;left:0;top:0;bottom:0;}
+.main-content{margin-left:260px;flex:1;overflow-y:auto;}
+
+/* Sidebar */
+.profile{text-align:center;margin-bottom:2rem;}
+.profile-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #ecf0f1;}
+.profile h2{margin:0.5rem 0 0;font-size:1.25rem;}
+.profile p{font-size:0.9rem;color:#bdc3c7;}
+.side-nav ul{list-style:none;padding:0;width:100%;}
+.side-nav li{margin:0.75rem 0;}
+.side-nav a{display:block;padding:0.5rem 1rem;border-radius:4px;color:#ecf0f1;transition:background 0.3s;}
+.side-nav a:hover,.side-nav a.active{background:rgba(236,240,241,0.15);}
+.nav-link.active { background: rgba(236,240,241,0.25); font-weight: bold; }
+
+
+/* Hero */
+.hero{position:relative;height:320px;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:2rem;}
+.hero-bg{background:url('hero-bg.jpg') center/cover no-repeat;position:absolute;inset:0;opacity:0.4;}
+.hero-text{position:relative;z-index:1;max-width:600px;padding:0 1rem;}
+.hero h2{font-size:2.75rem;margin-bottom:0.5rem;}
+.hero p{font-size:1rem;margin:0.3rem 0;}
+
+/* Sections */
+.section{padding:3rem 2rem;margin:1rem 2rem;border-radius:8px;}
+.about{background:#fff;}
+.skills{background:#eaf0f6;}
+.projects{background:#fff;}
+.experience{background:#eaf0f6;}
+.education{background:#fff;}
+.contact{background:#eaf0f6;}
+.section h2{text-align:center;margin-bottom:1.5rem;font-size:2rem;color:#2c3e50;}
+
+/* Skills */
+.skill-list{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;list-style:none;padding:0;}
+.skill-list li{background:#2c3e50;color:#ecf0f1;padding:0.5rem 1rem;border-radius:20px;}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;}
+.project-card{background:#fff;padding:1.25rem;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.2s;}
+.project-card:hover{transform:translateY(-4px);}
+.project-card h3{margin-bottom:0.75rem;color:#2c3e50;}
+
+/* Timeline */
+.timeline{position:relative;margin:2rem 0;}
+.timeline::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:4px;background:#2c3e50;}
+.timeline-item{position:relative;padding:1rem 1rem 1rem 3.5rem;margin-bottom:2rem;}
+.timeline-item h3{margin-bottom:0.25rem;color:#2c3e50;}
+.timeline-item span{display:block;font-size:0.9rem;color:#7f8c8d;margin-bottom:0.5rem;}
+.timeline-item::before{content:'';position:absolute;left:22px;top:1rem;width:12px;height:12px;background:#ecf0f1;border:3px solid #2c3e50;border-radius:50%;}
+
+/* Education */
+.education-list{list-style:none;padding:0;max-width:600px;margin:auto;}
+.education-list li{background:#fff;padding:1rem;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.08);margin-bottom:1rem;text-align:center;}
+
+/* Contact & Footer */
+footer{text-align:center;padding:1rem;background:#2c3e50;color:#ecf0f1;margin:2rem 2rem;border-radius:8px;}
+
+/* Button */
+.btn{display:inline-block;background:#2c3e50;color:#ecf0f1;padding:0.75rem 1.5rem;border-radius:4px;transition:background 0.3s;}
+.btn:hover{background:#1a252f;}
+
+
+.nav-link.active { background: rgba(236,240,241,0.25); font-weight: bold; }
+
+/* styles.css additions */
+.wave svg { display: block; width: 100%; height: 100px; }
+.wave { position: relative; top: 1px; }
+
+* styles.css additions */
+.hero { position: relative; overflow: hidden; }
+.wave { position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; overflow: hidden; line-height: 0; }
+.wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 100px; }
+.wave path { fill: #eaf0f6; }
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+#back-to-top:hover {
+  opacity: 0.8;
+}
+.nav-link.active { background: rgba(236,240,241,0.25); font-weight: bold; }
+/* Make the hero a positioning context */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* FULLSCREEN particles canvas, behind everything else */
+#particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Your existing hero background (if you keep it) */
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* Wave should sit between bg and content */
+.wave {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 0;
+  z-index: 2;
+}
+.wave svg {
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+.wave path {
+  fill: #eaf0f6;
+}
+
+/* Finally, your text/button sit on top */
+.hero-text {
+  position: relative;
+  z-index: 3;
+}
